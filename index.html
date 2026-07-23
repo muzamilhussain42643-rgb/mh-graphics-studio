@@ -17,24 +17,37 @@
 body{
     font-family:Arial,sans-serif;
     background:#0b0b0b;
-    color:white;
+    color:#fff;
     line-height:1.6;
 }
 
 header{
     background:#111;
-    padding:15px 7%;
+    padding:12px 6%;
     display:flex;
     justify-content:space-between;
     align-items:center;
     position:sticky;
     top:0;
     z-index:1000;
-    border-bottom:1px solid #d4af37;
+    border-bottom:2px solid #d4af37;
 }
 
-.logo{
-    font-size:23px;
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-area img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+    border-radius:50%;
+}
+
+.logo-text{
+    font-size:22px;
     font-weight:bold;
     color:#d4af37;
 }
@@ -42,7 +55,8 @@ header{
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:18px;
+    margin:0 8px;
+    font-weight:bold;
 }
 
 nav a:hover{
@@ -59,14 +73,21 @@ nav a:hover{
     background:linear-gradient(135deg,#111,#292929);
 }
 
+.hero-logo{
+    width:150px;
+    height:150px;
+    object-fit:contain;
+    margin-bottom:20px;
+}
+
 .hero h1{
-    font-size:50px;
+    font-size:52px;
     color:#d4af37;
 }
 
 .hero h3{
     font-size:24px;
-    margin:15px 0;
+    margin:12px 0;
 }
 
 .hero p{
@@ -88,7 +109,7 @@ nav a:hover{
     cursor:pointer;
 }
 
-.whatsapp-btn{
+.whatsapp{
     background:#25D366;
     color:white;
 }
@@ -151,36 +172,57 @@ input,select,textarea{
 
 textarea{
     height:120px;
-    resize:none;
 }
 
-.payment{
+.payment-box{
     max-width:600px;
-    margin:30px auto;
-    padding:25px;
+    margin:auto;
+    padding:30px;
     background:#181818;
     border-radius:15px;
-    border:1px solid #d4af37;
+    border:2px solid #d4af37;
 }
 
-.payment h3{
+.payment-box h3{
     color:#d4af37;
+    font-size:25px;
     margin-bottom:15px;
+}
+
+.payment-number{
+    font-size:24px;
+    color:#fff;
+    margin:15px 0;
+    font-weight:bold;
+}
+
+.social{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
 }
 
 .social a{
     display:inline-block;
-    margin:8px;
-    padding:12px 20px;
-    border-radius:25px;
-    background:#222;
+    padding:14px 25px;
+    border-radius:30px;
     color:white;
     text-decoration:none;
+    font-weight:bold;
 }
 
-.social a:hover{
-    background:#d4af37;
-    color:#111;
+.facebook{
+    background:#1877F2;
+}
+
+.tiktok{
+    background:#000;
+    border:1px solid #fff;
+}
+
+.youtube{
+    background:#FF0000;
 }
 
 footer{
@@ -204,27 +246,34 @@ footer{
 }
 
 @media(max-width:700px){
-    header{
-        flex-direction:column;
-        gap:12px;
-    }
 
-    nav{
-        text-align:center;
-    }
+header{
+    flex-direction:column;
+    gap:12px;
+}
 
-    nav a{
-        display:inline-block;
-        margin:5px;
-    }
+nav{
+    text-align:center;
+}
 
-    .hero h1{
-        font-size:36px;
-    }
+nav a{
+    display:inline-block;
+    margin:5px;
+    font-size:14px;
+}
 
-    .hero h3{
-        font-size:20px;
-    }
+.hero h1{
+    font-size:36px;
+}
+
+.hero h3{
+    font-size:20px;
+}
+
+.hero-logo{
+    width:110px;
+    height:110px;
+}
 }
 </style>
 </head>
@@ -233,8 +282,15 @@ footer{
 
 <header>
 
-<div class="logo">
+<div class="logo-area">
+
+<img src="ChatGPT%20Image%20Jul%2023%2C%202026%2C%2005_58_39%20AM.png"
+alt="MH Graphics Studio Logo">
+
+<div class="logo-text">
 MH Graphics Studio
+</div>
+
 </div>
 
 <nav>
@@ -242,6 +298,7 @@ MH Graphics Studio
 <a href="#services">Services</a>
 <a href="#order">Order</a>
 <a href="#payment">Payment</a>
+<a href="#social">Social</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -252,20 +309,24 @@ MH Graphics Studio
 
 <div>
 
+<img class="hero-logo"
+src="ChatGPT%20Image%20Jul%2023%2C%202026%2C%2005_58_39%20AM.png"
+alt="MH Graphics Studio Logo">
+
 <h1>MH Graphics Studio</h1>
 
 <h3>Professional Graphic Design & Urdu Composing</h3>
 
 <p>
-We provide professional graphic design, Urdu composing,
-logo design, banner design, social media designs and more.
+Creative Graphic Design, Urdu Composing, Logo Design,
+Flex & Banner Design, Social Media Posts and more.
 </p>
 
 <a class="btn" href="#order">
 🛒 Order Now
 </a>
 
-<a class="btn whatsapp-btn"
+<a class="btn whatsapp"
 href="https://wa.me/923156211226">
 💬 WhatsApp
 </a>
@@ -293,7 +354,7 @@ href="https://wa.me/923156211226">
 
 <div class="card">
 <h3>✨ Logo Design</h3>
-<p>Modern logos for your business and brand.</p>
+<p>Modern logos for businesses and brands.</p>
 </div>
 
 <div class="card">
@@ -303,12 +364,12 @@ href="https://wa.me/923156211226">
 
 <div class="card">
 <h3>💳 Visiting Card</h3>
-<p>Creative business and visiting card designs.</p>
+<p>Creative business card designs.</p>
 </div>
 
 <div class="card">
-<h3>📱 Social Media Posts</h3>
-<p>Facebook, Instagram and TikTok post designs.</p>
+<h3>📱 Social Media Design</h3>
+<p>Facebook, TikTok and Instagram post designs.</p>
 </div>
 
 <div class="card">
@@ -318,7 +379,7 @@ href="https://wa.me/923156211226">
 
 <div class="card">
 <h3>▶️ YouTube Thumbnail</h3>
-<p>Attractive thumbnails for YouTube creators.</p>
+<p>Attractive YouTube thumbnail designs.</p>
 </div>
 
 </div>
@@ -332,28 +393,162 @@ href="https://wa.me/923156211226">
 
 <div class="order-box">
 
-<p style="color:#ccc;margin-bottom:20px;">
-Fill in your details and send your order directly to WhatsApp.
-</p>
-
 <input id="name" type="text" placeholder="Your Name">
 
 <input id="phone" type="tel" placeholder="Your WhatsApp Number">
 
 <select id="service">
 
-<option value="">Select Your Service</option>
-
+<option value="">Select Service</option>
 <option>Graphic Design</option>
 <option>Urdu Composing</option>
 <option>Logo Design</option>
 <option>Flex & Banner Design</option>
 <option>Visiting Card Design</option>
-<option>Social Media Post</option>
+<option>Social Media Design</option>
 <option>Photo Editing</option>
 <option>YouTube Thumbnail</option>
 
 </select>
 
 <textarea id="details"
-placeholder="Write your work details here...
+placeholder="Write your project details..."></textarea>
+
+<button class="btn whatsapp"
+onclick="sendOrder()">
+Send Order on WhatsApp
+</button>
+
+</div>
+
+</section>
+
+
+<section id="payment">
+
+<h2>💳 Easypaisa Payment</h2>
+
+<div class="payment-box">
+
+<h3>Pay via Easypaisa</h3>
+
+<p>Account Holder Name</p>
+
+<strong>Abid Hussain Abid</strong>
+
+<div class="payment-number">
+03336291333
+</div>
+
+<p>
+After payment, send your payment screenshot
+and order details to our WhatsApp.
+</p>
+
+<a class="btn whatsapp"
+href="https://wa.me/923156211226">
+Send Payment Proof
+</a>
+
+</div>
+
+</section>
+
+
+<section id="social">
+
+<h2>🌐 Follow MH Graphics Studio</h2>
+
+<div class="social">
+
+<a class="facebook"
+href="https://www.facebook.com/share/19LJqEGbm6/"
+target="_blank">
+📘 Facebook
+</a>
+
+<a class="tiktok"
+href="https://www.tiktok.com/@gurchani009"
+target="_blank">
+🎵 TikTok
+</a>
+
+<a class="youtube"
+href="https://www.youtube.com/@Muzamilofficial78695"
+target="_blank">
+▶️ YouTube
+</a>
+
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<h2>📞 Contact Us</h2>
+
+<p>
+WhatsApp: <strong>0315-6211226</strong>
+</p>
+
+<a class="btn whatsapp"
+href="https://wa.me/923156211226">
+Chat on WhatsApp
+</a>
+
+</section>
+
+
+<a class="floating-whatsapp"
+href="https://wa.me/923156211226">
+💬 WhatsApp
+</a>
+
+
+<footer>
+
+<p>© 2026 MH Graphics Studio. All Rights Reserved.</p>
+
+<p>
+Graphic Design • Urdu Composing • Creative Services
+</p>
+
+</footer>
+
+
+<script>
+
+function sendOrder(){
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let service=document.getElementById("service").value;
+let details=document.getElementById("details").value;
+
+if(!name || !phone || !service || !details){
+
+alert("Please fill all order details.");
+
+return;
+
+}
+
+let message =
+"New Order - MH Graphics Studio%0A%0A" +
+"Name: " + encodeURIComponent(name) + "%0A" +
+"WhatsApp: " + encodeURIComponent(phone) + "%0A" +
+"Service: " + encodeURIComponent(service) + "%0A" +
+"Details: " + encodeURIComponent(details);
+
+window.open(
+"https://wa.me/923156211226?text=" + message,
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>
