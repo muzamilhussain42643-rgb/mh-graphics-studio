@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MH Graphics Studio | Graphic Design & Urdu Composing</title>
+<title>MH Graphics Studio</title>
 
 <style>
 *{
@@ -15,9 +15,9 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     background:#0b0b0b;
-    color:#fff;
+    color:white;
     line-height:1.6;
 }
 
@@ -33,21 +33,8 @@ header{
     border-bottom:1px solid #d4af37;
 }
 
-.logo-area{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.logo-area img{
-    width:55px;
-    height:55px;
-    object-fit:contain;
-    border-radius:50%;
-}
-
-.logo-text{
-    font-size:22px;
+.logo{
+    font-size:23px;
     font-weight:bold;
     color:#d4af37;
 }
@@ -55,8 +42,7 @@ header{
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:20px;
-    font-weight:bold;
+    margin-left:18px;
 }
 
 nav a:hover{
@@ -66,105 +52,69 @@ nav a:hover{
 .hero{
     min-height:90vh;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
     padding:50px 20px;
-    background:
-    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
-    linear-gradient(135deg,#111,#292929);
-}
-
-.hero-content{
-    max-width:800px;
-}
-
-.hero-logo{
-    width:130px;
-    height:130px;
-    object-fit:contain;
-    margin-bottom:20px;
-    border-radius:50%;
+    background:linear-gradient(135deg,#111,#292929);
 }
 
 .hero h1{
-    font-size:52px;
+    font-size:50px;
     color:#d4af37;
-    margin-bottom:15px;
 }
 
 .hero h3{
-    font-size:25px;
-    margin-bottom:15px;
+    font-size:24px;
+    margin:15px 0;
 }
 
 .hero p{
-    font-size:18px;
-    color:#ddd;
-    margin-bottom:30px;
+    color:#ccc;
+    max-width:700px;
+    margin:0 auto 25px;
 }
 
 .btn{
     display:inline-block;
+    padding:13px 25px;
+    margin:5px;
+    border-radius:30px;
     background:#d4af37;
     color:#111;
-    padding:13px 28px;
-    border-radius:30px;
     text-decoration:none;
     font-weight:bold;
-    margin:5px;
-    transition:.3s;
+    border:none;
+    cursor:pointer;
 }
 
-.btn:hover{
-    transform:scale(1.05);
-    background:#fff;
-}
-
-.btn-whatsapp{
+.whatsapp-btn{
     background:#25D366;
-    color:#fff;
+    color:white;
 }
 
 section{
-    padding:75px 7%;
+    padding:70px 7%;
     text-align:center;
 }
 
 h2{
-    font-size:38px;
     color:#d4af37;
-    margin-bottom:15px;
-}
-
-.section-text{
-    color:#ccc;
-    max-width:700px;
-    margin:0 auto 40px;
+    font-size:36px;
+    margin-bottom:30px;
 }
 
 .services{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
+    gap:20px;
 }
 
 .card{
-    background:#171717;
+    background:#181818;
     padding:30px 20px;
     border-radius:15px;
     border:1px solid #333;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    border-color:#d4af37;
-}
-
-.icon{
-    font-size:45px;
-    margin-bottom:15px;
 }
 
 .card h3{
@@ -176,82 +126,84 @@ h2{
     color:#bbb;
 }
 
-.portfolio{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.portfolio-box{
-    height:200px;
-    background:linear-gradient(135deg,#d4af37,#222);
-    border-radius:15px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:24px;
-    font-weight:bold;
-    color:#111;
-    transition:.3s;
-}
-
-.portfolio-box:hover{
-    transform:scale(1.03);
-}
-
-.about{
+.order-section{
     background:#151515;
 }
 
-.about p{
-    max-width:800px;
+.order-box{
+    max-width:650px;
     margin:auto;
-    color:#ccc;
-    font-size:18px;
-}
-
-.contact{
-    background:#111;
-}
-
-.contact-box{
-    max-width:600px;
-    margin:auto;
-    background:#191919;
-    padding:35px;
+    background:#1d1d1d;
+    padding:30px;
     border-radius:15px;
-    border:1px solid #333;
+    border:1px solid #444;
 }
 
-.contact-box p{
-    margin-bottom:20px;
-    color:#ddd;
+input,select,textarea{
+    width:100%;
+    padding:13px;
+    margin:8px 0;
+    background:#0e0e0e;
+    color:white;
+    border:1px solid #555;
+    border-radius:8px;
+}
+
+textarea{
+    height:120px;
+    resize:none;
+}
+
+.payment{
+    max-width:600px;
+    margin:30px auto;
+    padding:25px;
+    background:#181818;
+    border-radius:15px;
+    border:1px solid #d4af37;
+}
+
+.payment h3{
+    color:#d4af37;
+    margin-bottom:15px;
+}
+
+.social a{
+    display:inline-block;
+    margin:8px;
+    padding:12px 20px;
+    border-radius:25px;
+    background:#222;
+    color:white;
+    text-decoration:none;
+}
+
+.social a:hover{
+    background:#d4af37;
+    color:#111;
 }
 
 footer{
     background:#050505;
     text-align:center;
     padding:25px;
-    color:#999;
-    border-top:1px solid #222;
+    color:#aaa;
 }
 
-.whatsapp{
+.floating-whatsapp{
     position:fixed;
     right:20px;
     bottom:20px;
     background:#25D366;
-    color:#fff;
+    color:white;
     padding:15px 22px;
     border-radius:50px;
     text-decoration:none;
     font-weight:bold;
     z-index:999;
-    box-shadow:0 5px 20px rgba(0,0,0,.5);
 }
 
 @media(max-width:700px){
-
     header{
         flex-direction:column;
         gap:12px;
@@ -264,7 +216,6 @@ footer{
     nav a{
         display:inline-block;
         margin:5px;
-        font-size:14px;
     }
 
     .hero h1{
@@ -274,15 +225,6 @@ footer{
     .hero h3{
         font-size:20px;
     }
-
-    .hero-logo{
-        width:100px;
-        height:100px;
-    }
-
-    h2{
-        font-size:30px;
-    }
 }
 </style>
 </head>
@@ -291,22 +233,15 @@ footer{
 
 <header>
 
-<div class="logo-area">
-
-<img src="ChatGPT%20Image%20Jul%2023%2C%202026%2C%2005_58_39%20AM.png" 
-alt="MH Graphics Studio Logo">
-
-<div class="logo-text">
+<div class="logo">
 MH Graphics Studio
-</div>
-
 </div>
 
 <nav>
 <a href="#home">Home</a>
-<a href="#about">About</a>
 <a href="#services">Services</a>
-<a href="#portfolio">Portfolio</a>
+<a href="#order">Order</a>
+<a href="#payment">Payment</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -315,44 +250,27 @@ MH Graphics Studio
 
 <section class="hero" id="home">
 
-<div class="hero-content">
-
-<img class="hero-logo"
-src="ChatGPT%20Image%20Jul%2023%2C%202026%2C%2005_58_39%20AM.png"
-alt="MH Graphics Studio">
+<div>
 
 <h1>MH Graphics Studio</h1>
 
 <h3>Professional Graphic Design & Urdu Composing</h3>
 
 <p>
-Creative designs, professional Urdu composing and digital design services
-for businesses, brands and individuals.
+We provide professional graphic design, Urdu composing,
+logo design, banner design, social media designs and more.
 </p>
 
-<a class="btn" href="#services">
-View Our Services
+<a class="btn" href="#order">
+🛒 Order Now
 </a>
 
-<a class="btn btn-whatsapp"
+<a class="btn whatsapp-btn"
 href="https://wa.me/923156211226">
-Chat on WhatsApp
+💬 WhatsApp
 </a>
 
 </div>
-
-</section>
-
-
-<section class="about" id="about">
-
-<h2>About Us</h2>
-
-<p>
-Welcome to MH Graphics Studio. We provide professional graphic design,
-Urdu composing and creative digital services. Our goal is to provide
-high-quality and attractive designs for our clients.
-</p>
 
 </section>
 
@@ -361,58 +279,46 @@ high-quality and attractive designs for our clients.
 
 <h2>Our Services</h2>
 
-<p class="section-text">
-Professional design and composing services for your personal and business needs.
-</p>
-
 <div class="services">
 
 <div class="card">
-<div class="icon">🎨</div>
-<h3>Graphic Design</h3>
-<p>Creative and professional graphic design services.</p>
+<h3>🎨 Graphic Design</h3>
+<p>Creative and professional graphic design.</p>
 </div>
 
 <div class="card">
-<div class="icon">📝</div>
-<h3>Urdu Composing</h3>
+<h3>📝 Urdu Composing</h3>
 <p>Professional Urdu composing and InPage work.</p>
 </div>
 
 <div class="card">
-<div class="icon">✨</div>
-<h3>Logo Design</h3>
-<p>Modern and attractive logos for your business.</p>
+<h3>✨ Logo Design</h3>
+<p>Modern logos for your business and brand.</p>
 </div>
 
 <div class="card">
-<div class="icon">🖼️</div>
-<h3>Flex & Banner Design</h3>
-<p>Professional flex, banner and advertising designs.</p>
+<h3>🖼️ Flex & Banner</h3>
+<p>Professional flex and advertising designs.</p>
 </div>
 
 <div class="card">
-<div class="icon">💳</div>
-<h3>Visiting Card</h3>
+<h3>💳 Visiting Card</h3>
 <p>Creative business and visiting card designs.</p>
 </div>
 
 <div class="card">
-<div class="icon">📱</div>
-<h3>Social Media Design</h3>
-<p>Facebook, Instagram and social media post designs.</p>
+<h3>📱 Social Media Posts</h3>
+<p>Facebook, Instagram and TikTok post designs.</p>
 </div>
 
 <div class="card">
-<div class="icon">📸</div>
-<h3>Photo Editing</h3>
-<p>Professional photo editing and enhancement services.</p>
+<h3>📸 Photo Editing</h3>
+<p>Professional photo editing services.</p>
 </div>
 
 <div class="card">
-<div class="icon">▶️</div>
-<h3>YouTube Thumbnail</h3>
-<p>Eye-catching thumbnails for YouTube creators.</p>
+<h3>▶️ YouTube Thumbnail</h3>
+<p>Attractive thumbnails for YouTube creators.</p>
 </div>
 
 </div>
@@ -420,78 +326,34 @@ Professional design and composing services for your personal and business needs.
 </section>
 
 
-<section id="portfolio">
+<section class="order-section" id="order">
 
-<h2>Our Portfolio</h2>
+<h2>🛒 Place Your Order</h2>
 
-<p class="section-text">
-Some of our creative design categories.
+<div class="order-box">
+
+<p style="color:#ccc;margin-bottom:20px;">
+Fill in your details and send your order directly to WhatsApp.
 </p>
 
-<div class="portfolio">
+<input id="name" type="text" placeholder="Your Name">
 
-<div class="portfolio-box">Logo Design</div>
+<input id="phone" type="tel" placeholder="Your WhatsApp Number">
 
-<div class="portfolio-box">Social Media Posts</div>
+<select id="service">
 
-<div class="portfolio-box">Banner Design</div>
+<option value="">Select Your Service</option>
 
-<div class="portfolio-box">Urdu Composing</div>
+<option>Graphic Design</option>
+<option>Urdu Composing</option>
+<option>Logo Design</option>
+<option>Flex & Banner Design</option>
+<option>Visiting Card Design</option>
+<option>Social Media Post</option>
+<option>Photo Editing</option>
+<option>YouTube Thumbnail</option>
 
-</div>
+</select>
 
-<br>
-
-<a class="btn btn-whatsapp"
-href="https://wa.me/923156211226">
-Order Your Design
-</a>
-
-</section>
-
-
-<section class="contact" id="contact">
-
-<h2>Contact Us</h2>
-
-<div class="contact-box">
-
-<p>
-Have a project or need a professional design?
-Contact MH Graphics Studio today.
-</p>
-
-<p>
-📱 WhatsApp: <strong>0315-6211226</strong>
-</p>
-
-<a class="btn btn-whatsapp"
-href="https://wa.me/923156211226">
-Chat on WhatsApp
-</a>
-
-</div>
-
-</section>
-
-
-<a class="whatsapp"
-href="https://wa.me/923156211226">
-💬 WhatsApp
-</a>
-
-
-<footer>
-
-<p>
-© 2026 MH Graphics Studio. All Rights Reserved.
-</p>
-
-<p>
-Professional Graphic Design & Urdu Composing Services
-</p>
-
-</footer>
-
-</body>
-</html>
+<textarea id="details"
+placeholder="Write your work details here...
